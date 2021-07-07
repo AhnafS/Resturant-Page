@@ -1,1 +1,3 @@
-console.log("Hello");
+import renderMenu from "./pages/menuPage";
+
+renderMenu();
