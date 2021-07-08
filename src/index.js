@@ -1,3 +1,3 @@
-import renderMenu from "./pages/menuPage";
+import renderMenu from "./pages/homePage";
 
 renderMenu();
