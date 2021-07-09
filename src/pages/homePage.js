@@ -1,13 +1,33 @@
 import createNav from '../components/nav-bar.js';
 import '../css/homePage.css';
-import Background from '../img/menuBackground.jpeg';
+import chef from '../img/chef.jpeg';
+import createFooter from '../components/footer';
 
 const content = document.querySelector('#content');
 
+const createHomePageContent = function() {
+    const homeDiv = document.createElement('div');
+    homeDiv.setAttribute('id', 'homeInfo');
 
-const renderMenu = function() {
-    createNav();
+    let homeDesc = document.createElement('h4');
+    homeDesc.textContent = 'Most comfortable and relaxing resturant around you';
+    homeDiv.appendChild(homeDesc);
 
+    let homeDate = document.createElement('h5');
+    homeDate.textContent = 'Since 2004';
+    homeDiv.appendChild(homeDate);
+
+    let chefIcon = new Image();
+    chefIcon.src = chef;
+    homeDiv.appendChild(chefIcon);
+
+    content.appendChild(homeDiv);
 }
 
-export default renderMenu;
+const renderHome = function() {
+    createNav();
+    createHomePageContent();
+    createFooter();
+}
+
+export default renderHome;
