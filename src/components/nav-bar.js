@@ -25,7 +25,11 @@ const createNav = function() {
     navLinks.append(home, menu, contactUs);
 
     nav.append(nameDiv, navLinks);
-    content.appendChild(nav);
+    return nav;
 }
 
-export default createNav;
+const appendNav = function() {
+    content.prepend(createNav());
+}
+
+export default appendNav;

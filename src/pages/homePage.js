@@ -1,9 +1,9 @@
-import createNav from '../components/nav-bar.js';
 import '../css/homePage.css';
 import chef from '../img/chef.jpeg';
-import createFooter from '../components/footer';
+import createNavAndFooter from '../components/navAndFooter.js';
 
 const content = document.querySelector('#content');
+content.innerHTML = '';
 
 const createHomePageContent = function() {
     const homeDiv = document.createElement('div');
@@ -25,9 +25,8 @@ const createHomePageContent = function() {
 }
 
 const renderHome = function() {
-    createNav();
     createHomePageContent();
-    createFooter();
+    createNavAndFooter();
 }
 
 export default renderHome;
