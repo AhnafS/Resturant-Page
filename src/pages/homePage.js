@@ -1,8 +1,6 @@
 import '../css/homePage.css';
-// import '../css/index.css'
 import chef from '../img/chef.jpeg';
 import createNavAndFooter from '../components/navAndFooter.js';
-import clearContent from "../components/clear";
 
 
 const content = document.querySelector('#content');

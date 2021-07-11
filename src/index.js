@@ -3,10 +3,7 @@ import renderMenu from "./pages/menuPage";
 import renderContact from './pages/contactPage.js';
 import { getHome, getMenu, getContact } from './components/nav-bar';
 
-// renderMenu();
-// renderHome();
 renderContact();
-
 
 //Nav 
 
