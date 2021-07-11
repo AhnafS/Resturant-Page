@@ -1,16 +1,31 @@
 import createNavAndFooter from "../components/navAndFooter";
-import '../css/menuPage.css';
 import hotdog from '../img/hotdog.png'
-
+import '../css/menuPage.css';
+import burger from '../img/burger.png';
+import salad from '../img/fruitSalad.png';
+import pizza from '../img/cheesePizza.png';
+import pie from '../img/cherryPie.png';
+import icecream from '../img/icecream.png';
 
 const content = document.querySelector('#content');
-content.innerHTML = '';
 
-const menuDiv = document.createElement('div');
-menuDiv.setAttribute('id', 'menu');
-content.appendChild(menuDiv);
+const createMenuContainer = function() {
+    const menuPage = document.createElement('div');
+    menuPage.setAttribute('id', 'menuPage');
+    content.appendChild(menuPage);
 
-const createItem = function(itemName, imgSrc, itemPrice) {
+    const menuDiv = document.createElement('div');
+    menuDiv.setAttribute('id', 'menu');
+    menuPage.appendChild(menuDiv);
+
+    return {
+        menuPage,
+        menuDiv
+    }
+};
+
+const createItem = function(itemName, imgSrc, itemPrice, menuDiv) {
+
     const item = document.createElement('div');
     item.classList.add('item');
 
@@ -30,9 +45,13 @@ const createItem = function(itemName, imgSrc, itemPrice) {
 }
 
 const renderMenu = function() {
-    createItem('Hotdog', hotdog, '$2');
-    createItem('Hotdog', '../img/hotdog.png', '$2');
-    createItem('Hotdog', '../img/hotdog.png', '$2');
+    const container = createMenuContainer();
+    createItem('Hotdog', hotdog, '$2', container.menuDiv);
+    createItem('Burger', burger, '$4', container.menuDiv);
+    createItem('Fruit Salad', salad, '$3', container.menuDiv);
+    createItem('Cheese Pizza', pizza, '$8', container.menuDiv);
+    createItem('Cheese Pizza', pie, '$5', container.menuDiv);
+    createItem('Cheese Pizza', icecream, '$3', container.menuDiv);
     createNavAndFooter();
 
 }

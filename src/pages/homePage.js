@@ -1,11 +1,18 @@
 import '../css/homePage.css';
+// import '../css/index.css'
 import chef from '../img/chef.jpeg';
 import createNavAndFooter from '../components/navAndFooter.js';
+import clearContent from "../components/clear";
+
 
 const content = document.querySelector('#content');
-content.innerHTML = '';
 
 const createHomePageContent = function() {
+    const homePage = document.createElement('div');
+    homePage.setAttribute('id', 'homePage');
+
+    content.appendChild(homePage);
+
     const homeDiv = document.createElement('div');
     homeDiv.setAttribute('id', 'homeInfo');
 
@@ -21,7 +28,7 @@ const createHomePageContent = function() {
     chefIcon.src = chef;
     homeDiv.appendChild(chefIcon);
 
-    content.appendChild(homeDiv);
+    homePage.appendChild(homeDiv);
 }
 
 const renderHome = function() {

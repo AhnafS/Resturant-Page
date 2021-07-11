@@ -1,24 +1,77 @@
+/* Common CSS */
+
 @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
 body,
 html {
+    width: 100%;
     margin: 0;
     font-family: 'Prompt', sans-serif;
 }
 
+* {
+    border: 1px solid transparent;
+}
 
-/* #content {
+#content {
     height: 100%;
     width: 100%;
-} */
+    /* background-image: url('../img/homeBackground.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; */
+}
+
+
+/* END */
+
+
+/* Home Page CSS */
+
+#homePage {
+    background-image: url('../img/homeBackground.jpeg');
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#homeInfo {
+    background-color: antiquewhite;
+    width: 30em;
+    height: 30em;
+    padding: 1em;
+    text-align: center;
+    font-size: 1.3em;
+    opacity: 0.9;
+    border-radius: 1.5em;
+    position: relative;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+#homeInfo img {
+    height: 70%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+
+/* END */
+
+
+/* Menu Page CSS */
 
 #menuPage {
+    width: 100%;
+    height: 100%;
     background-image: url('../img/menuBackground.jpeg');
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    border: .00000001px solid transparent;
 }
 
 #menu {
@@ -66,46 +119,4 @@ html {
 }
 
 
-/* #menu {
-    width: 55%;
-    object-fit: cover;
-    margin: 5em auto 5em auto;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 25em 25em 25em;
-    grid-auto-rows: 25em;
-    grid-gap: 1.5em;
-    overflow: scroll;
-}
-
-.item {
-    background-color: #A7BBC7;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-size: 1.4em;
-    border-radius: 1em;
-}
-
-.item img {
-    width: 50%;
-    height: 8em;
-    object-fit: contain;
-    background-color: rgb(76, 122, 153);
-    border-radius: 100%;
-}
-
-.item h3 {
-    font-size: 2em;
-    margin: .3em 0 .5em 0;
-}
-
-.item h4 {
-    font-size: 1.5em;
-}
-
-.item:hover {
-    background-color: rgb(73, 134, 175);
-    transform: scale(1.01);
-} */
+/* END */

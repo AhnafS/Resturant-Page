@@ -1,4 +1,4 @@
-import appendNav from "./nav-bar";
+import { appendNav } from "./nav-bar";
 import createFooter from "./footer";
 
 const content = document.querySelector("content");
